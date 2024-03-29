@@ -1,0 +1,19 @@
+syntax = "proto3";
+syntax = "proto3";
+
+package hello;
+
+// Определение сервиса HelloService с методом SayHello
+service HelloService {
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+}
+
+// Структура запроса, содержащая имя пользователя
+message HelloRequest {
+  string name = 1;
+}
+
+// Структура ответа, содержащая приветствие
+message HelloReply {
+  string message = 1;
+}
